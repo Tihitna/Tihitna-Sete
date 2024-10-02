@@ -1,0 +1,43 @@
+body{
+  background: #d9a7c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.images{
+  animation:imageSlider 30s linear infinite;
+  display: inline-block;
+}
+@keyframes imageSlider {
+  from{
+      transform: translateX(0);
+  }
+  to{
+      transform: translateX(-50%);
+  }
+}
+.social {
+  animation: topDown 3s forwards;
+}
+
+@keyframes topDown {
+  from {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+
+  to {
+      transform: translateY(0);
+      opacity: 11;
+
+  }
+}
+.box{
+  background-color: rgba(128, 128, 128, 0.208);
+}
+.cardbox{
+  background-color: rgba(128, 128, 128, 0.501);
+}
+.navBox{
+  background-color: rgba(212, 212, 212, 0.911);
+}
