@@ -3,12 +3,12 @@ import { Link, Outlet } from "react-router-dom"
 function UIProjects(){
     const Ui = [
         {
-            "title":"Website Design For Don Dental Clinic",
+            "title":"Design For Dental Clinic",
             "img":"./projects/dondesign.png",
             "link":"https://www.figma.com/design/4SZjhSD5osWIECtLU7ogKd/Don?node-id=0-1&node-type=canvas&t=zVYEFGDrcsNtb9rN-0"
         },
         {
-            "title":"Store Management Web App Design",
+            "title":"Store Management Design",
             "img":"./projects/joydesign.png",
             "link":"https://www.figma.com/design/Fu2MpoFri5Q5Gs7FFNdMWw/Untitled?t=MDrOCSZ3fp9kMEiJ-0"
         },

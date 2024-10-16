@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 function AllProjects(){
     const Projects = [
         {
-            "title":"Responsive Portfolio Using HTML And CSS",
+            "title":"Portfolio",
             "img":"./projects/alpha.png",
             "link":"https://portfolio-tihitna.vercel.app/"
         },
@@ -13,7 +13,7 @@ function AllProjects(){
             "link":""
         },
         {
-            "title":"Telegebeya Responsive Website ",
+            "title":"Telegebeya Website ",
             "img":"./projects/telegebeya.png",
             "link":"https://tele-gebeya.vercel.app/"
         },
@@ -43,12 +43,12 @@ function AllProjects(){
             "link":"https://don-clients.onrender.com/"
         },
         {
-            "title":"Website Design For Don Dental Clinic",
+            "title":"Design For Dental Clinic",
             "img":"./projects/dondesign.png",
             "link":"https://www.figma.com/design/4SZjhSD5osWIECtLU7ogKd/Don?node-id=0-1&node-type=canvas&t=zVYEFGDrcsNtb9rN-0"
         },
         {
-            "title":"Store Management Web App Design",
+            "title":"Store Management Design",
             "img":"./projects/joydesign.png",
             "link":"https://www.figma.com/design/Fu2MpoFri5Q5Gs7FFNdMWw/Untitled?t=MDrOCSZ3fp9kMEiJ-0"
         },

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 function WebProjects(){
     const webProjects = [
         {
-            "title":"Responsive Portfolio Using HTML And CSS",
+            "title":" Portfolio ",
             "img":"./projects/alpha.png",
             "link":"https://portfolio-tihitna.vercel.app/"
         },
@@ -13,7 +13,7 @@ function WebProjects(){
             "link":""
         },
         {
-            "title":"Telegebeya Responsive Website ",
+            "title":"Telegebeya Website ",
             "img":"./projects/telegebeya.png",
             "link":"https://tele-gebeya.vercel.app/"
         },
