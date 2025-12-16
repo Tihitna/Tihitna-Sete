@@ -8,6 +8,7 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
 .bubble-container {
   position: absolute;
   overflow: hidden;
@@ -21,7 +22,7 @@ body {
   position: absolute;
   top: -50px;
   border-radius: 50%;
-background: radial-gradient(circle at 30% 30%,
+  background: radial-gradient(circle at 30% 30%,
       rgba(255, 255, 255, 0.9),
       rgba(173, 216, 230, 0.2) 40%,
       rgba(255, 255, 255, 0.05) 70%),
@@ -35,6 +36,7 @@ background: radial-gradient(circle at 30% 30%,
   opacity: 0.7;
   pointer-events: none;
 }
+
 .images {
   animation: imageSlider 30s linear infinite;
   display: inline-block;

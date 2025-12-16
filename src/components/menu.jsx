@@ -17,7 +17,7 @@ function menu() {
   });
   return (
     <>
-      <ul className="xl:pl-96 md:pt-10 lg:space-y-16 xl:text-5xl md:text-4xl lg:pl-80  md:pl-52 md:space-y-14 text-2xl space-y-12 pl-16 pt-20 xxs:pt-10 xs:text-3xl xs:space-y-14 font-rubikMono tracking-widest font-semibold ">
+      <ul className="xl:pl-96 md:pt-10 lg:space-y-16 xl:text-5xl md:text-4xl lg:pl-80  md:pl-52 md:space-y-14 text-2xl space-y-12 pl-16 pt-20 xxs:pt-7 xs:text-3xl xs:space-y-14 font-rubikMono tracking-widest font-semibold ">
         <li>
           <Link
             to="/"
