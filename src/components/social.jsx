@@ -1,37 +1,69 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+} from "react-icons/fa";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+
 function Social() {
-    return (
-        <>
-            <div className="social absolute xl:right-3 lg:right-[1px] sm:right-0 xs:right-0 xxs:right-0 md:right-0 top-24">
-                <div className="social-icons lg:mx-5 md:mx-0 xs:mx-0 xxs:mx-0 flex-row items-center ">
-                    <Link to="https://www.facebook.com/tihitna.sete.9" target="_blank" >
-                        <div className='hover:rounded-full hover:shadow-lg hover:shadow-yellowColor p-2 px-3 my-12 flex justify-center xs:px-2 xxs:px-2'>
-                            <img src="./facebook.png" className="w-7 xs:w-6 xxs:w-6" alt="" />
-                        </div>
-                    </Link>
-                    <Link to="https://www.instagram.com/setetihitna/" target="_blank" >
-                        <div className='hover:rounded-full hover:shadow-lg hover:shadow-yellowColor p-2 px-3 my-12 flex justify-center xs:px-2 xxs:px-2'>
-                            <img src="./instagram.png" className="w-5 xs:w-4 xxs:w-4" alt="" />
-                        </div>
-                    </Link>
-                    <Link to="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2F" target="_blank" >
-                        <div className='hover:rounded-full hover:shadow-lg hover:shadow-yellowColor p-2 px-3 my-12 flex justify-center xs:px-2 xxs:px-2'>
-                            <img src="./linkedin.png" className="w-5 xs:w-4 xxs:w-4" alt="" />
-                        </div>
-                    </Link>
-                    <Link to="https://x.com/?logout=1727367337922" target="_blank" >
-                        <div className='hover:rounded-full hover:shadow-lg hover:shadow-yellowColor p-2 px-3 my-12 flex justify-center xs:px-2 xxs:px-2'>
-                            <img src="./twitter.png" className="w-5 xs:w-4 xxs:w-4" alt="" />
-                        </div>
-                    </Link>
-                    <Link to="https://github.com/Tihitna" target="_blank">
-                        <div className='hover:rounded-full hover:shadow-lg hover:shadow-yellowColor p-2  my-12 flex justify-center xs:px-2 xxs:px-2'>
-                            <img src="./github.png" className="w-5 xs:w-4 xxs:w-4" alt="" />
-                        </div>
-                    </Link>
-                </div>
-            </div>
-        </>
-    )
+  const circlesRef = useRef([]);
+
+  useEffect(() => {
+    const circles = circlesRef.current;
+    const tl = gsap.timeline({ repeat: -1 }); // infinite loop
+
+    // Each circle animation
+    circles.forEach((circle) => {
+      tl.fromTo(
+        circle,
+        { strokeDasharray: 283, strokeDashoffset: 283 }, // hidden
+        { strokeDashoffset: 0, duration: 1, ease: "none" } // draw
+      ).to(circle, { strokeDashoffset: 283, duration: 0.5, ease: "none" }); // hide again
+    });
+  }, []);
+
+  const icons = [
+    { icon: <FaFacebook />, link: "https://www.facebook.com/tihitna.sete.9" },
+    { icon: <FaInstagram />, link: "https://www.instagram.com/setetihitna/" },
+    { icon: <FaLinkedin />, link: "https://www.linkedin.com/feed/" },
+    { icon: <FaTwitter />, link: "https://x.com/" },
+    { icon: <FaGithub />, link: "https://github.com/Tihitna" },
+  ];
+
+  return (
+    <div className="social absolute lg:bottom-[5%] bottom-[2%] left-[3%] md:w-auto w-[93%]">
+      <div className="social-icons md:gap-10 flex md:text-xl sm:text-lg  gap-4 justify-between  ">
+        {icons.map((item, i) => (
+          <Link
+            key={i}
+            to={item.link}
+            target="_blank"
+            className="relative flex items-center justify-center w-12 h-12 hover:bg-white/20 hover:backdrop-blur-md rounded-full"
+          >
+            {/* SVG Ring */}
+            <svg className="absolute w-14 h-14 " viewBox="0 0 100 100">
+              <circle
+                ref={(el) => (circlesRef.current[i] = el)}
+                cx="50"
+                cy="50"
+                r="45"
+                stroke="white"
+                strokeWidth="2"
+                fill="none"
+              />
+            </svg>
+
+            {/* Icon */}
+            <div className="relative z-10 ">{item.icon}</div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
 }
-export default Social
+
+export default Social;
