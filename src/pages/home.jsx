@@ -60,8 +60,8 @@ function Home() {
 
   return (
     <>
-      <div className="container w-screen  flex-row items-center xl:px-28 lg:px-16 md:px-10 sm:px-5 xs:px-5 xxs:px-5 max-w-screen-2xl">
-        <div className="hero space-y-5 text-center w-full m-auto lg:pt-[10%] pt-[40%]">
+      <div className="container  flex-row items-center xl:px-28 lg:px-16 md:px-10 sm:px-5 xs:px-5 xxs:px-5 max-w-screen-2xl">
+        <div className="hero space-y-5 text-center w-full m-auto lg:pt-[10%] pt-[40%] xxs:pt-[30%]">
           <div className="md:space-x-3 font-medium font-monoton name lg:text-8xl md:text-6xl xs:text-4xl text-3xl space-x-1 overflow-hidden md:word-space-lg word-space-sm ">
             TIHITNA SETE.
           </div>
